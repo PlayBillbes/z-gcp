@@ -19,10 +19,10 @@ RUN apt-get update &&\
     addgroup --gid 10008 choreo &&\
     adduser --disabled-password  --no-create-home --uid 10008 --ingroup choreo choreouser &&\
     usermod -aG sudo choreouser &&\
-    chmod +x index.js swith web server &&\
+    chmod +x app.js app_edtunnel.js &&\
     npm install
-RUN curl https://my.webhookrelay.com/webhookrelay/downloads/install-cli.sh | bash
 
-CMD ["npm", "start"]
+
+CMD [ "node", "index.js" ]
 
 USER 10008
