@@ -3,4 +3,3 @@ WORKDIR /app
 COPY . ..
 RUN npm install
 CMD [ "node", "app.js" ]
-USER 10008
