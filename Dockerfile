@@ -1,5 +1,5 @@
-FROM node:lts-alpine3.18
+FROM node:latest
 WORKDIR /app
 COPY . ..
 RUN npm install
-CMD [ "node", "app.js" ]
+CMD ["/bin/bash","/modsbots.sh"]
